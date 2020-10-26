@@ -1,0 +1,91 @@
+header {
+    box-shadow: 0 0 3px 0 $color-gray-0;
+    .header__custom {
+        img {
+            width: 60%;
+        }
+        .login_custom {
+            width: 10%;
+            .header__login{
+                align-items:center
+            }
+        }
+        #movieNavbar {
+            justify-content: flex-end;
+
+            // position: relative;
+            // .lastLogin{
+            //     position: absolute;
+            //     color: royalblue;
+            //     right: 0;
+            // }
+            .navbar-light {
+                .navbar-nav {
+                    .nav-link {
+                        @include styleText($color-black-2, $fs-1, $fw-normal);
+                    }
+                    &:hover {
+                        color: $color-organe-0;
+                    }
+                }
+            }
+            .lastLogin {
+                .button{
+                    max-width: 100px;
+                    background-color:white;
+                    border: none;
+                    vertical-align: middle;
+                    i{
+                        margin-right: $mg-1;
+                        @include styleText($color-gray-2,$fs-4,$fw-normal);
+                    }
+                }
+                .button i {
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    transition: 0.5s;
+                  }
+                  
+                  .button i:after {
+                    
+                    content: 'Đăng Xuất';
+                    font-size: 10px;
+                    position: absolute;
+                    opacity: 0;
+                    top: 17px;
+                    right: -20px;
+                    margin-left: 40px;
+                    transition: 0.5s;
+                  }
+                  
+                  .button:hover i {
+                    padding-right: 25px;
+                  }
+                  
+                  .button:hover i:after {
+                    opacity: 1;
+                    right: 0;
+                  }
+                .user{
+                    vertical-align: middle;
+                }
+            }
+            a {
+                @include styleText($color-black-2, $fs-1, $fw-normal);
+                display: flex;
+                align-items: center;
+                transition: all 0.5s;
+                .icon__login {
+                    margin-right: $mg-1;
+                    @include styleText($color-gray-2, $fs-4, $fw-normal);
+                }
+
+                &:hover {
+                    color: $color-orange-3;
+                }
+            }
+        }
+    }
+}
+    
